@@ -2,15 +2,15 @@
 Ulauncher Extension for coingecko
 
 Available commands:
- - keyword cryptocurrency-symbol (e.g. "c eth") 
+ - keyword cryptocurrency-symbol (e.g. `c eth`) 
    - Shows the current price of the cryptocurrency using the default fiat currency.
- - keyword cryptocurrency-symbol fiat-symbol (e.g. "c eth eur")
+ - keyword cryptocurrency-symbol fiat-symbol (e.g. `c eth eur)
    - Shows the current price of the cryptocurrency using a custom fiat currency.
- - keyword cryptocurrency-symbol multiplier (e.g. "c eth 3") 
+ - keyword cryptocurrency-symbol multiplier (e.g. `c eth 3`) 
    - Shows the current price of the cryptocurrency multiplied by this number.
- - keyword cryptocurrency-symbol fiat-symbol multiplier (e.g. "c eth eur 3")
+ - keyword cryptocurrency-symbol fiat-symbol multiplier (e.g. `c eth eur 3`)
    - Stacking the previous commands.
- - keyword up (e.g. "c up")
+ - keyword up (e.g. `c up`)
    - Update local database
  
 It's possible to set the default keyword, cryptocurrency and fiat currency in the preferences.
