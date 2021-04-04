@@ -1,0 +1,29 @@
+{
+    "required_api_version": "^2.0.0",
+    "name": "Coingecko Query",
+    "description": "Extension for looking up current crypto prices on Coingecko",
+    "developer_name": "Roxas",
+    "icon": "images/icon.png",
+    "options": {
+        "query_debounce": 0.1
+    },
+    "preferences": [{
+        "id": "extension-key",
+        "type": "keyword",
+        "name": "Coingecko Query",
+        "description": "Keyword for the extension",
+        "default_value": "c"
+    }, {
+        "id": "conv",
+        "type": "input",
+        "name": "Conversion Currency",
+        "description": "Default currency to convert to (e.g. usd, eur, jpy)",
+        "default_value": "usd"
+    }, {
+        "id": "sym",
+        "type": "input",
+        "name": "Default Cryptocurrency",
+        "description": "Default cryptocurrency to show without any input",
+        "default_value": "btc"
+    }]
+}
