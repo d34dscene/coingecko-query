@@ -8,6 +8,7 @@ from pathlib import Path
 
 import requests
 import json
+from math import log, floor
 
 DATA = Path(__file__).absolute().parent / "data"
 ICON = Path(__file__).absolute().parent / "images"
@@ -88,10 +89,12 @@ class KeywordQueryEventListener(EventListener):
                             f.write(chunk)
 
             # Show current crypto price
+            price = current_price * multiplicator
+            precision = max(floor(log(1/price if price !=0 else 0.01)/log(10))+4, 2)
             items.append(
                 ExtensionResultItem(
                     icon=f"images/{symbol}.png",
-                    name="{}: {:,.2f} {}".format(coin_id.capitalize(), current_price * multiplicator, fiat.upper()),
+                    name="{}: {:,.{}f} {}".format(coin_id.capitalize(), price, precision, fiat.upper()),
                     description="Market Cap: {:,.2f} {}\nPrice change 24h: {}%".format(market_cap, fiat.upper(), pcp24),
                     on_enter=CopyToClipboardAction(str(current_price * multiplicator)),
                 )
